@@ -1,0 +1,36 @@
+{% extends "travel_app/base.html" %} {% block content %}
+{% load static %}
+{% if places %}
+  <div class="popular-places">
+    <div class="ptitle">
+      <h1>Search Results</h1>
+    </div>
+    <div class="underline"></div>
+    {% for place in places %}
+
+    <div class="cards">
+      <div class="image">
+        <img src="{{ place.image.url }}" alt="{{ place.title }}" />
+      </div>
+      <div class="title">
+        <h1>{{ place.title }}</h1>
+      </div>
+      <div class="desc">
+        <p>{{ place.desc|truncatewords:10 }}</p>
+        <a href="{% url 'detail' place.id %}"
+          ><button class="btn btn-outline-info">Read More</button></a
+        >
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <div class="search_sad">
+    <img src="{% static 'travel_app/img/sad_face.png' %}" alt="Sad Face">
+    <h1 style="text-align: center; font-family: 'Gaegu';">OOPS!! NOTHING FOUND.</h1>
+  </div>
+  
+
+{% endif %}
+
+{% endblock content %}

@@ -1,0 +1,28 @@
+{% extends "travel_app/base.html" %} 
+{% load static %}
+{% block content %}
+<div class="about">
+  <div class="about-image"></div>
+  <h1>Hotels</h1>
+</div>
+<div class="popular-places">
+  {% for hotel in hotels %}
+  <div class="cards" >
+    <div class="image">
+      <img src="{{ hotel.image.url }}" alt="{{ hotel.name }}" />
+    </div>
+    <div class="title">
+      <h1>{{ hotel.name }}</h1>
+    </div>
+    <div class="desc">
+      <p>{{ hotel.desc|truncatewords:20 }}</p>
+      <h4>Price per room: ${{ hotel.price|floatformat:2 }}</h4>
+      <a href="{% url 'booking' hotel.id %}">
+        <button class="btn btn-outline-info">Book now</button>
+      </a> 
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock content %}

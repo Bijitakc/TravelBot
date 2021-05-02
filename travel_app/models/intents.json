@@ -1,0 +1,179 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "Is anyone there?", "Hello", "Good day", "What's up", "Hey"],
+         "responses": ["Hello!", "Good to see you!", "Hi there, how can I help?", "Hello There!"],
+         "context_set": ""
+        },
+        {"tag": "place",
+         "patterns": ["I'd like to go somewhere beautiful", "what do you suggest", "what do you reccommend?", "place to visit", "place"],
+         "responses": ["Nepal is very beautiful", "Why dont you visit Kathmandu ", "What about Thamel?","What about Basantapur?"],
+         "context_set": ""
+        },
+        {"tag": "temples",
+          "patterns": ["I'd like to see some temples", "what do you suggest in temples", "what temples do you reccommend?", "temples to visit", "temples"],
+          "responses": ["There are lots of temples such as: Annapurna temple, Seto machhindra nath temple, Akashbhairav temple, Taleju temple, Vajrayogini temple, Jagannath temple, Kalabhairav temple, Dakshinkali, Budanilkantha, Hanumandhoka, Shiva parbati temple",
+            "You can visit Seto machhindra nath temple, Akashbhairav temple, Pashupatinath","Why don't you visit Dakshinkali, Hanumandhoka, Annapurna temple."],
+          "context_set": ""
+        },
+        {"tag": "activities",
+          "patterns": ["I'd like to do some activities in ktm", "any activities to do", "what can i do besides visiting places", "activities", "fun things to do", "fun activities that i can do in ktm"],
+          "responses": ["Hiking", "You can chill in resorts", "You can visit restaurants, play in casinos, go hiking, sightseeing","What about hiking, trekking, fun parks, going to casinos?"],
+          "context_set": ""
+        },
+        {"tag": "kathmandu",
+          "patterns": ["I would like to go somewhere beautiful in ktm", "what do you suggest in kathmandu", "what do you reccommend in ktm?", "place to visit in ktm", "place to visit in kathmandu"],
+          "responses": ["Pashupatinath, Swayambhu, Basantapur, Patan, Boudhanath ", "Why dont you visit Patan, Boudhanath, Bhaktapur", "What about Patan, Boudhanath, Pashupatinath. ","You can visit Thamel, Basantapur, Durbarmarg, Narayanhiti palace. Yhey are close to eath other."],
+          "context_set": ""
+        },
+        {"tag": "gifts",
+          "patterns": ["What should I buy in Nepal?", "what do you suggest I buy", "gifts", "what can i buy there"],
+          "responses": ["you should buy Thangka Paintings.", "Singing Bowls", "Pashmina, Rice Paper items", "Khukuri, Rice Paper items", "Handicrafts, Statues and masks.", "You can buy Khukuri, Jwellery and Arts.", "Why dont you buy Pashmina. its very warm."],
+          "context_set": ""
+        },
+        {"tag": "location",
+         "patterns": ["Where is kathmandu?", "where is ktm located", "location of kathmandu", "location"],
+         "responses": ["Kathmandu is located in the country Nepal", "Kathmandu is located in Nepal in central region."],
+         "context_set": ""
+        },
+        {"tag": "like",
+         "patterns": ["﻿What do you like most about kathmandu?", "what is good about kathmandu?", "what can i like about kathmandu?", "what is beautiful in ktm"],
+         "responses": ["I love its beautiful temples", "I like its natural beauty, its serenity, its heritage"],
+         "context_set": ""
+        },
+        {"tag": "vehicle",
+         "patterns": ["How can i get to kathmandu?", "can i get to ktm by flight?", "How do i get to kathmandu?"],
+         "responses": ["Yes since kathmandu has nepal’s only international airport you can get there by flight", "You can get to ktm by flight"],
+         "context_set": ""
+        },
+        {"tag": "hotel",
+         "patterns": ["which hotel should i stay in?", "are there any good hotels there?", "where can i stay in while i visit kathmandu?", "where can i stay in ktm"],
+         "responses": ["I personally prefer yak and yeti", "What kind of hotel do you prefer?"],
+         "context_set": ""
+        },
+        {"tag": "cheap",
+         "patterns": ["cheap hotels", "hotels with low price", "i want to stay in hotel with less expense", "are there any hotels with low cost"],
+         "responses": ["You can stay in Kathmandu Family Peace House, Beehive Hostel Kathmandu, Green House Lodge", "I like Zen Bed and Breakfast ","I think Hotel Simrika is good."],
+         "context_set": ""
+        },
+        {"tag": "average",
+         "patterns": ["hotels with average price", "moderately expensive hotels", "which hotel is good within medium price range?", "affordable hotels"],
+         "responses": ["Why don't you stay in Everest Hotel, Hotel Shambala, Royal Empire Boutique", "I personally prefer Royal Empire Boutique."],
+         "context_set": ""
+        },
+        {"tag": "expensive",
+         "patterns": ["hotels that are expensive", "good priced hotels", "i want to stay in 5 star hotel"],
+         "responses": ["I personally prefer Yak and Yeti.", "I like Kathmandu Marriott Hotel, Hotel Sangrila", "I like Aloft Kathmandu, Yak and Yeti."],
+         "context_set": ""
+        },
+        {"tag": "food",
+         "patterns": ["Famous food in kathmandu", "what kinds of food can i taste in kathmandu", "what food should i try while i visit there?", "good foods", "what can i eat there?", "foods to eat in kathmandu"],
+         "responses": ["Mo:Mo: is a must.", "You can try Mo:Mos, Newari cuisines", "Local foods like panipuri, chatpate, Mo:Mos are the best. You should also try newari foods."],
+         "context_set": ""
+        },
+        {"tag": "safety",
+         "patterns": ["How safe is ktm", "is kathmandu safe?", "do i have to worry about safety there?"],
+         "responses": ["Kathmandu is mostly safe.", "Yes it is safe but you have to be quite careful about the thugs."],
+         "context_set": ""
+        },
+        {"tag": "language",
+         "patterns": ["What language do Nepali people speak", "do nepali people speak in english", "can people in kathmandu understand english?", "language"],
+         "responses": ["Majority of the people in kathmandu do speak English as well as Nepali. However there are more than 100 languages as mother tongue in Nepal.", "Many people in Kathmandu understand and speak English."],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day", "bye", "see you"],
+         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!", "Bye. Have a great day!"],
+         "context_set": ""
+        },
+        {"tag": "age",
+         "patterns": ["how old", "how old?", "what is your age", "how old are you", "age?"],
+         "responses": ["I am 18 years old!", "18 years young!"],
+         "context_set": ""
+        },
+        {"tag": "pashupatinath",
+         "patterns": ["where is pashupatinath", "highlights about pashupatinath", "what is beautiful in pashupatinath", "pashupatinath"],
+         "responses": ["Pashupatinath is a famous and sacred Hindu temple located in Kathmandu", "It is very beautiful temple that is listed in UNESCO World Heritage Site list.", "Pashupatinath temple is a beautiful temple that has sprawling collection of temples, ashrams, images and inscriptions raised over the centuries along the banks of the sacred Bagmati river"],
+         "context_set": ""
+        },
+        {"tag": "swayambhu",
+         "patterns": ["Where is swayambhu", "highlights about swayambhu", "beautiful things in swayambhu", "swayambhu"],
+         "responses": ["Swayambhu Temple temple is one of the most important religious shrines in the city of Kathmandu", "It is beautiful temple where people circumnavigate the temple in a clockwise direction since it is believed to wash away all the sins.", "Swayambhunath temple is located on the outskirts to the west of Kathmandu. It is probably the most sacred temples among the Buddhists pilgrimage sites."],
+         "context_set": ""
+        },
+        {"tag": "boudhanath",
+         "patterns": ["Where is boudhanath", "highlights about boudhanath", "boudhanath", "any attracting feature in boudhanath"],
+         "responses": ["Boudhanath is a stupa located in Kathmandu which was listed under UNESCO World Heritage Site.", "Boudhanath is a beautiful stupa where people circumnavigate which is believed to atone for their sins."],
+         "context_set": ""
+        },
+        {"tag": "patan",
+         "patterns": ["Where is patan", "highlights about patan", "patan", "patan durbar square"],
+         "responses": ["Patan Durbar Square is a marvel of Newar architechture. There are many temples and idols in this area. It is one of the 3 durbar squares in Kathmandu.", "Patan Durbar Square is situated at the centre of the city of Lalitpur in Nepal."],
+         "context_set": ""
+        },
+        {"tag": "basantapur",
+         "patterns": ["Where is basantapur", "i want to go basantapur", "basantapur", "any attracting feature in basantapur"],
+         "responses": ["Kathmandu Durbar Square (Basantapur Durbar Kshetra) is one of three Durbar (royal palace) Squares in the Kathmandu Valley in Nepal, all of which are UNESCO World Heritage Sites."],
+         "context_set": ""
+        },
+        {"tag": "bhaktapur",
+         "patterns": ["Where is bhaktapur", "highlights about bhaktapur durbar square", "bhaktapur", "can i go bhaktapur"],
+         "responses": [" Bhaktapur retains some of its ancient way of life, reminding you of what the entire Kathmandu Valley must have looked like during the medieval period.", "The Bhaktapur Durbar Square is located in the current town of Bhaktapur, also known as Khwopa, which lies 13 km east of Kathmandu.", "Some of the major attractions of bhaktapur durbar square are 55 window palace, Nyatapole temple, Bhairav nath temple."],
+         "context_set": ""
+        },
+        {"tag": "seto",
+         "patterns": ["Where is seto machhindra temple", "seto machhindra temples", "seto", "any attracting feature in seto machhindra temple"],
+         "responses": ["Seto Machindranath is a deity worshiped by both Hindus and Buddhists in Kathmandu, Nepal. The temple is believed to have been established around the 10th century.Every year, the deity's image is placed in a chariot and paraded around Kathmandu in a festival known as Jana Baha Dyah Jatra."],
+         "context_set": ""
+        },
+        {"tag": "paintings",
+         "patterns": ["i want to know about thangka paintings", "what is thangka paintings", "thangka", "thangka painting", "where can i get thangka paintings"],
+         "responses": ["Thangka paining is a Tibetan Buddhist painting on cotton, silk applique, usually depicting a Buddhist deity, scene, or mandala. Thangkas are traditionally kept unframed and rolled up when not on display, mounted on a textile backing somewhat in the style of Chinese scroll paintings, with a further silk cover on the front. Thangka serve as important teaching tools depicting the life of the Buddha, various influential lamas and other deities and bodhisattvas."],
+         "context_set": ""
+        },
+        {"tag": "hike",
+         "patterns": ["famous hike spots in ktm", "famous hike spots in kathmandu", "hike", "can tourists hike in kathmandu"],
+         "responses": ["Nepal is famous for its various beautiful hiking spots like Sundarijal and Nagarkot hikes.", "Sundarijal Hike", "Nagarkot Hike"],
+         "context_set": ""
+        },
+        {"tag": "state",
+         "patterns": ["how are you", "how are you doing", "all good", "is everything okay"],
+         "responses": ["I'm great. Thanks for asking.", "Always good.", "Never been better"],
+         "context_set": ""
+        },
+        {"tag": "robot",
+         "patterns": ["Are you a robot", "are you a bot", "are you a chatbot", "what are you"],
+         "responses": ["Ofcourse I am bot. How can i help you?"],
+         "context_set": ""
+        },
+        {"tag": "commonone",
+         "patterns": ["What's up?"],
+         "responses": ["The sky. HaHa", "Not a lot, quiet day today.", "All good."],
+         "context_set": ""
+        },
+        {"tag": "question",
+         "patterns": ["I have a question", "can i ask you something", "can you answer me", "can you hear me"],
+         "responses": ["Ofcourse! Ask away.", "Sure. What's your question?"],
+         "context_set": ""
+        },
+        {"tag": "help",
+         "patterns": ["How can you help me", "what can you do", "how do you work"],
+         "responses": ["I can help you plan a visit. Ask me a question.", "", ""],
+         "context_set": ""
+        },
+        {"tag": "hate",
+         "patterns": ["what dont you like", "what annoys you", "what do you hate", "what makes you angry"],
+         "responses": ["A lot of things, like all the digits other than 0 and 1"],
+         "context_set": ""
+        },
+        {"tag": "name",
+         "patterns": ["what is your name", "what should I call you", "whats your name?", "who are you?", "who?"],
+         "responses": ["You can call me TravelBot.", "I'm TravelBot!", "I'm your friend TravelBot", "TravelBot"],
+         "context_set": ""
+        },
+        {"tag": "thamel",
+         "patterns": ["i want to know about thamel", "where is thamel", "thamel", "can you tell me more about thamel", "can you say something about thamel"],
+         "responses": ["A buzzing, visitor-friendly area, Thamel is the city’s main nightlife zone.", "Bars blast out live music by cover bands, and lively eateries serve Nepalese and international dishes in Thamel.", "Thamel is everything you have been looking for in a tourist destination. Its full of life. Different shops, spas, foods, night life, music fills this place. You won't forget it once you visit there."],
+         "context_set": ""
+        }
+   ]
+}

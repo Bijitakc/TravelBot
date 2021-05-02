@@ -1,0 +1,42 @@
+{% extends "travel_app/base.html" %} 
+{% load static %}
+{% block content %}
+
+{% if items %}
+	<div class="container">
+		<div class="destination">
+			<h1>Booked Hotels List</h1>
+        </div>
+        {% for item in items %}
+		<div class="row border mt-5">
+			<div class="col-lg">
+				<br>
+				<img src="{{ item.hotel.image.url }}" height="70%" width="70%">
+				<h3 style="margin-top: 20px;">{{item.hotel.name}}</h3>
+			</div>
+
+			<div class="col-sm">
+				<br>
+				<div class="card card-body mb-3">
+					<h3>Booked by: {{item.customer.username}}</h3>
+					<hr>
+					<h4>Price: $ {{item.hotel.price}} per room</h4>
+					<hr>
+					<p>Number of rooms: {{item.no_of_rooms}}</p><hr>
+					<p>Check-in: {{item.checkin_date}}</p>
+					<p>Check-out: {{item.checkout_date}}</p>
+					<p>Number of days: {{item.no_of_days}}</p><hr>
+					<h4>Total Price: ${{item.get_total|floatformat:2}}</h4>
+					<hr><br>
+				</div>
+			</div>
+        </div>
+        {% endfor %}
+	</div>
+{% else %}
+	<div class="search_sad">
+		<img src="{% static 'travel_app/img/sad_face.png' %}" alt="Sad Face">
+		<h1 style="text-align: center; font-family: 'Gaegu';">No Bookings Yet.</h1>
+	</div>
+{% endif %}
+{% endblock content%}

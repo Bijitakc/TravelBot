@@ -1,0 +1,72 @@
+{% extends "travel_app/base.html" %} 
+{% block content %}
+	<div class="container">
+		<div class="destination">
+			<h1>Booking Summary</h1>
+		  </div>
+		<div class="row border mt-5">
+			
+			<div class="col-lg">
+				<br>
+				<img src="{{ item.hotel.image.url }}" height="70%" width="70%">
+				<h3 style="margin-top: 20px;">{{item.hotel.name}}</h3>
+			</div>
+
+			<div class="col-sm">
+				<br>
+				<div class="card card-body mb-3">
+					<h3>Booked by: {{item.customer.username}}</h3>
+					<hr>
+					<h4>Price: $ {{item.hotel.price}} per room</h4>
+					<hr>
+					<p>Number of rooms: {{item.no_of_rooms}}</p>
+					<p>Check-in: {{item.checkin_date}}</p>
+					<p>Check-out: {{item.checkout_date}}</p>
+					<p>Number of days: {{item.get_no_of_days}}</p><hr>
+					<h4>Total Price: ${{item.get_total|floatformat:2}}</h4>					
+					<hr><br><br>
+					<div id="paypal-button-container"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://www.paypal.com/sdk/js?client-id=AVzue8qcdW8WUX6syZ_k4L4W6akvVqt8ZV7D1BnSu-eL_YsUMf4Kg_5ehAfhckGE5_owMsn4gW-PvX90&currency=USD"></script>
+
+	<script>
+		var total = '{{item.get_total}}'
+        // Render the PayPal button into #paypal-button-container
+        paypal.Buttons({
+
+			style:{
+				color: 'blue',
+				shape: 'rect',
+			},
+
+            // Set up the transaction
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: parseFloat(total).toFixed(2)
+                        }
+                    }]
+                });
+            },
+
+            // Finalize the transaction
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    // Show a success message to the buyer
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+					
+					var id={{user.id}}
+					location.href="/" +"booking_details" +"/" + id + "/"
+                });
+            }
+
+
+        }).render('#paypal-button-container');
+    </script>
+
+{% endblock content%}

@@ -1,0 +1,20 @@
+{% extends "travel_app/base.html" %}
+{% load static %}
+{% block content %}
+    <h1 style="text-align: center; font-family: 'Caveat', cursive; font-size: 80px; font-weight: bold; margin-top: 20px;">Profile</h1>
+    <div class="container border mt-4" >
+        <div class="media">
+            <img class="rounded-circle account-img mt-4 mb-2" src="{{ user.profile.image.url }}" style="width: 200px; height: 200px;" alt="{{user.username}}">
+            <div class="media-body ml-5 p-4">
+                <h3 class="account-name">Name: {{ user.profile.name }}</h3><hr>
+                <h5 class="account-heading">Username: {{ user.username }}</h5><br> 
+                <p class="text-secondary">Email: {{ user.email }}</p>
+                <br><hr><br>
+                <a href="{% url 'update_profile' %}">
+                    <button class="btn btn-outline-info">Update Profile</button>    
+                </a>
+                
+            </div>
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,23 @@
+{% extends "travel_app/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="container">
+        <div style="margin: 15px 0px; ">
+            <img src="{{ hotel.image.url }}" alt="{{ hotel.name }}" style="width: 900px; margin-bottom: 10px; height: 300px;"/>
+            <h1>{{ hotel.name }}</h1><hr>
+            <p>{{ hotel.desc }}</p> <hr>
+        </div>
+        <form method="POST">
+            {% csrf_token %}
+            {% if errors.message %}
+            <p style="color: red;">{{errors.message}}</p>
+            {%endif%}
+            <fieldset class="form-group">
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Confirm</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
